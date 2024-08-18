@@ -1,0 +1,10 @@
+{
+    "name": "Portable Encyptor",
+    "versiom": "1.0.0",
+    "description": "This is a simple project to generate aleatory keys.",
+    "manifest_version": 3,
+    "author": "William Colasso",
+    "action":{
+        "default_popup": "index.html"
+    }
+}
