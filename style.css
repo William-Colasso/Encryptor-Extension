@@ -1,0 +1,121 @@
+html {
+  font-family: Pixeled;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+.title {
+  margin-bottom: 2vh;
+}
+
+#title {
+  color: #12a525;
+}
+#subTitle {
+  color: #12a525;
+  font-size: xx-small;
+  position: absolute;
+  margin-top: -5vh;
+  text-align: center;
+  justify-content: center;
+  margin-left: 3vh;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-size: xx-small;
+    margin-left: -4.2vw;
+}
+.options label input[type="checkbox"]{
+    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: wheat;
+    width: 20px;
+    height: 20px;
+    margin-left: 170px;
+    margin-top: -10px;
+    display: flex;
+    flex-direction: column;
+}
+.options  input[type="checkbox"]:checked{
+    transition: 0.7s;
+    background-color: #12a52f;
+    border-radius: 10px;
+}
+.options label input[type="checkbox"]:not(:checked){
+    transition: 0.7s;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+
+.lenght{
+    color: #12a525;
+    font-size: x-small;
+    justify-content: left;
+    text-align: left;
+    margin-left: -10.7vw;
+}
+#lenght{
+    width: 25px;
+    height: 25px;
+    border-radius:  3px ;
+}
+
+#output {
+  text-decoration: none;
+  border: solid 1px black;
+  border-radius: 6px;
+}
+
+#button {
+  text-decoration: none;
+  padding: 10px;
+  background-color: black;
+  color: #12a525;
+  font-family: Pixeled;
+  border: 2px #218b2f solid;
+  cursor: pointer;
+}
+#button:hover {
+  transition: 0.5s;
+  background-color: white;
+  color: black;
+  border-radius: 3px;
+}
+#copy {
+  text-decoration: none;
+  padding: 10px;
+  background-color: black;
+  color: #12a525;
+  font-family: Pixeled;
+  border: 2px #218b2f solid;
+  cursor: pointer;
+}
+#copy:hover {
+  transition: 0.5s;
+  background-color: white;
+  color: black;
+  border-radius: 3px;
+}
+#github {
+  text-decoration-color: wheat;
+  color: white;
+  font-size: smaller;
+}
+#credits {
+  color: white;
+  text-decoration: none;
+  font-size: small;
+}

@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Encryptor</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="title">
+      <h2 id="title">Encryptor</h2>
+      <p id="subTitle">a passwords generator</p>
+    </div>
+    <div class="options">
+        <label>Letters<input type="checkbox" name="options" ></label>
+        <label>Numbers(0,1,2,3....)<input type="checkbox" name="options"></label>
+        <label >Special Characters<input type="checkbox" name="options"></label>
+    </div>
+    <div class="lenght">Lenght:<input type="number" id="lenght" min="1" value="1"/></div>
+    <div>
+      <textarea id="output" cols="30" rows="2"></textarea>
+    </div>
+    <div class="button">
+      <button id="button" onclick="">Encrypt</button>
+      <button id="copy" onclick="copy()">Copy</button>
+    </div>
+    <div id="credits">
+      <footer>
+        &copy;
+        <a id="github" href="https://github.com/William-Colasso" target="_blank"
+          >William Colasso</a
+        >
+        <img src="Brazil Icon.png" alt="Brazil's flag" />
+      </footer>
+    </div>
+  </body>
+  <script src="script.js"></script>
 </html>

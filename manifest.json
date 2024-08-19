@@ -5,6 +5,7 @@
     "manifest_version": 3,
     "author": "William Colasso",
     "action":{
-        "default_popup": "index.html"
+        "default_popup": "index.html",
+        "default_title": "Portable Encyptor"
     }
 }
