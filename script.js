@@ -95,6 +95,16 @@ const HashNoNumber = {
       endText+= HashNoNumber[getRandomInteger(1,84)]
     }
     output.innerText = endText
+  }else if(!options[0].checked && options[1].checked && options[2].checked ){
+    for(let i=0; i<lenght;i++){
+      endText+= CharMap[getRandomInteger(53,94)]
+    }
+    output.innerText = endText
+  }else if(options[0].checked && options[1].checked && options[2].checked ){
+    for(let i=0; i<lenght;i++){
+      endText+= CharMap[getRandomInteger(1,94)]
+    }
+    output.innerText = endText
   }
 
 
