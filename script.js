@@ -1,3 +1,6 @@
+document.getElementById('copy').addEventListener('click', copy);
+document.getElementById('button').addEventListener('click', generateKey);
+
 async function copy() {
   var output = document.getElementById("output").value;
   var copy = document.getElementById("copy");

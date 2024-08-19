@@ -1,5 +1,13 @@
+@font-face {
+  font-family: 'Pixeled';
+  src: url('Pixeled.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   font-family: Pixeled;
+  user-select: none;
 }
 
 body {
@@ -8,14 +16,20 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 400px;
+  width: 300px;
   margin: 0;
+  border-radius: 10px;
 }
 .title {
+  margin-top: 10vh;
   margin-bottom: 2vh;
+  font-family: Pixeled;
 }
 
 #title {
+
+  font-size: x-large;
   color: #12a525;
 }
 #subTitle {
@@ -34,6 +48,7 @@ body {
     color: #ffffff;
     font-size: xx-small;
     margin-left: -4.2vw;
+    font-family: Pixeled;
 }
 .options label input[type="checkbox"]{
     
