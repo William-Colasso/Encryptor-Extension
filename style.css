@@ -56,7 +56,7 @@ body {
 .options label input[type="checkbox"]:not(:checked){
     transition: 0.7s;
     background-color: #ffffff;
-    border-radius: 4px;
+    border-radius: 0px;
 }
 
 

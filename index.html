@@ -12,16 +12,16 @@
       <p id="subTitle">a passwords generator</p>
     </div>
     <div class="options">
-        <label>Letters<input type="checkbox" name="options" ></label>
+        <label>Letters<input type="checkbox" name="options"  checked></label>
         <label>Numbers(0,1,2,3....)<input type="checkbox" name="options"></label>
         <label >Special Characters<input type="checkbox" name="options"></label>
     </div>
-    <div class="lenght">Lenght:<input type="number" id="lenght" min="1" value="1"/></div>
+    <div class="lenght">Lenght:<input type="number" id="lenght" min="1" max="1000" value="1"/></div>
     <div>
-      <textarea id="output" cols="30" rows="2"></textarea>
+      <textarea id="output" cols="30" rows="2">Your password here</textarea>
     </div>
     <div class="button">
-      <button id="button" onclick="">Encrypt</button>
+      <button id="button" onclick="generateKey()">Encrypt</button>
       <button id="copy" onclick="copy()">Copy</button>
     </div>
     <div id="credits">
