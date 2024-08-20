@@ -9,8 +9,8 @@
         "default_title": "Portable Encyptor"
     },
     "icons": {
-    "16": "favicon_Portable_Encryptor_16.png",
-    "48": "favicon_Portable_Encryptor_48.png",
-    "128": "favicon_Portable_Encryptor_128.png"
+    "16": "content/favicon_Portable_Encryptor_16.png",
+    "48": "content/favicon_Portable_Encryptor_48.png",
+    "128": "content/favicon_Portable_Encryptor_128.png"
   }
 }
