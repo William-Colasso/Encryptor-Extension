@@ -25,12 +25,12 @@ async function copy() {
 
 async function generateKey() {
   var output = document.getElementById("output");
-  var lenght = document.getElementById('lenght').value
+  var length = document.getElementById('length').value
   var options = document.getElementsByName("options");
   var endText = ""
-  if(lenght>100000){
-    alert("Min lenght:1, Max lenght: 100000.")
-    lenght = 100000
+  if(length>100000){
+    alert("Min length:1, Max length: 100000.")
+    length = 100000
   }
 
   const CharMap = {
@@ -74,37 +74,37 @@ const HashNoNumber = {
 
 
   if(options[0].checked && !options[1].checked && !options[2].checked ){
-    for(let i=0; i<lenght;i++){
+    for(let i=0; i<length;i++){
       endText+= CharMap[getRandomInteger(1,52)]
     }
     output.innerText = endText
   }else if(!options[0].checked && options[1].checked && !options[2].checked ){
-    for(let i=0; i<lenght;i++){
+    for(let i=0; i<length;i++){
       endText+= CharMap[getRandomInteger(53,62)]
     }
     output.innerText = endText
   }else if(!options[0].checked && !options[1].checked && options[2].checked ){
-    for(let i=0; i<lenght;i++){
+    for(let i=0; i<length;i++){
       endText+= CharMap[getRandomInteger(63,94)]
     }
     output.innerText = endText
   }else if(options[0].checked && options[1].checked && !options[2].checked ){
-    for(let i=0; i<lenght;i++){
+    for(let i=0; i<length;i++){
       endText+= CharMap[getRandomInteger(1,62)]
     }
     output.innerText = endText
   }else if(options[0].checked && !options[1].checked && options[2].checked ){
-    for(let i=0; i<lenght;i++){
+    for(let i=0; i<length;i++){
       endText+= HashNoNumber[getRandomInteger(1,84)]
     }
     output.innerText = endText
   }else if(!options[0].checked && options[1].checked && options[2].checked ){
-    for(let i=0; i<lenght;i++){
+    for(let i=0; i<length;i++){
       endText+= CharMap[getRandomInteger(53,94)]
     }
     output.innerText = endText
   }else if(options[0].checked && options[1].checked && options[2].checked ){
-    for(let i=0; i<lenght;i++){
+    for(let i=0; i<length;i++){
       endText+= CharMap[getRandomInteger(1,94)]
     }
     output.innerText = endText
