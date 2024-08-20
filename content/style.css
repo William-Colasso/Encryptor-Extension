@@ -124,7 +124,7 @@ body {
   color: black;
   border-radius: 3px;
 }
-#credits {
+.credits {
   color: white;
   text-decoration: none;
   font-size: small;
@@ -140,5 +140,12 @@ body {
 #brazil{
   position:absolute;
   margin-left: 10px ;
+}
+#passwords{
+  margin-left: 50px;
+  text-decoration-color: wheat;
+  color: white;
+  font-size: smaller;
+  position: relative;
 }
 
