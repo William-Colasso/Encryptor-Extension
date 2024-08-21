@@ -108,10 +108,10 @@ const HashNoNumber = {
       endText+= CharMap[getRandomInteger(1,94)]
     }
     output.innerText = endText
+    
+   
   }
-
-
-
+  
 }
 function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
