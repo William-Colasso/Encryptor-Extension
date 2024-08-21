@@ -16,14 +16,15 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 450px;
+  height: 500px;
   width: 350px;
   margin: 0;
-  border-radius: 10px;
+  border: solid 1px black;
+  border-radius: 20%;
 }
 .title {
 
-  margin-bottom: 3vh;
+  margin-bottom: 5vh;
   font-family: Pixeled;
 }
 
@@ -34,7 +35,7 @@ body {
 }
 #subTitle {
   color: #12a525;
-  font-size: xx-small;
+  font-size: x-small;
   position: absolute;
   margin-top: -5vh;
   text-align: center;
@@ -46,7 +47,7 @@ body {
     display: flex;
     flex-direction: column;
     color: #ffffff;
-    font-size: xx-small;
+    font-size: small;
     margin-left: -4.2vw;
     font-family: Pixeled;
 }
@@ -58,7 +59,7 @@ body {
     background-color: wheat;
     width: 20px;
     height: 20px;
-    margin-left: 170px;
+    margin-left: 250px;
     margin-top: -10px;
     display: flex;
     flex-direction: column;
@@ -81,11 +82,14 @@ body {
     justify-content: left;
     text-align: left;
     margin-left: -10.7vw;
+    font-family: Pixeled;
+
 }
 #length{
     width: 25px;
     height: 25px;
     border-radius:  3px ;
+
 }
 
 #output {
@@ -126,26 +130,57 @@ body {
 }
 .credits {
   color: white;
-  text-decoration: none;
+
   font-size: small;
-  position: absolute;
-  margin-top: 400px;
+  position: relative;
+  margin-top: 25px;
+  font-family: sans-serif;
 }
 #github {
+
   text-decoration-color: wheat;
   color: white;
-  font-size: smaller;
+  font-size: 14px;
   position: relative;
+  font-family: sans-serif;
 }
 #brazil{
-  position:absolute;
+  position:relative;
   margin-left: 10px ;
+  margin-right: 10px;
+  font-family: sans-serif;
 }
 #passwords{
-  margin-left: 50px;
+  margin-left: 0px;
   text-decoration-color: wheat;
   color: white;
-  font-size: smaller;
+  font-size: 14px;
   position: relative;
+  font-family: sans-serif;
 }
-
+#save{
+  color: white;
+  margin-top: -400px;
+  font-size: small;
+  font-family: Pixeled;
+}
+#save input[type ="checkbox"]{
+  appearance: none;
+  padding: 10px 10px;
+  background-color: white;
+  margin-top: 12px;
+  position: absolute;
+}
+#save input[type ="checkbox"]:checked{
+  appearance: none;
+  padding: 10px 10px;
+  background-color: #12a52f;
+  transition: 0.3s;
+  border-radius: 5%;
+}
+#save input[type ="checkbox"]:not(:checked){
+  appearance: none;
+  padding: 10px 10px;
+  background-color: #ffffff;
+  transition: 0.3s;
+}
