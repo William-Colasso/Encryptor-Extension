@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Pixeled';
-  src: url('content/Pixeled.ttf') format('truetype');
+  font-family: "Pixeled";
+  src: url("content/Pixeled.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -23,13 +23,11 @@ body {
   border-radius: 20%;
 }
 .title {
-
   margin-bottom: 5vh;
   font-family: Pixeled;
 }
 
 #title {
-
   font-size: x-large;
   color: #12a525;
 }
@@ -43,53 +41,49 @@ body {
   margin-left: 3vh;
 }
 
-.options{
-    display: flex;
-    flex-direction: column;
-    color: #ffffff;
-    font-size: small;
-    margin-left: -4.2vw;
-    font-family: Pixeled;
+.options {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-size: small;
+  margin-left: -4.2vw;
+  font-family: Pixeled;
 }
-.options label input[type="checkbox"]{
-    
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: wheat;
-    width: 20px;
-    height: 20px;
-    margin-left: 250px;
-    margin-top: -10px;
-    display: flex;
-    flex-direction: column;
+.options label input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: wheat;
+  width: 20px;
+  height: 20px;
+  margin-left: 250px;
+  margin-top: -10px;
+  display: flex;
+  flex-direction: column;
 }
-.options  input[type="checkbox"]:checked{
-    transition: 0.7s;
-    background-color: #12a52f;
-    border-radius: 10px;
+.options input[type="checkbox"]:checked {
+  transition: 0.7s;
+  background-color: #12a52f;
+  border-radius: 10px;
 }
-.options label input[type="checkbox"]:not(:checked){
-    transition: 0.7s;
-    background-color: #ffffff;
-    border-radius: 0px;
+.options label input[type="checkbox"]:not(:checked) {
+  transition: 0.7s;
+  background-color: #ffffff;
+  border-radius: 0px;
 }
 
-
-.length{
-    color: #12a525;
-    font-size: x-small;
-    justify-content: left;
-    text-align: left;
-    margin-left: -10.7vw;
-    font-family: Pixeled;
-
+.length {
+  color: #12a525;
+  font-size: x-small;
+  justify-content: left;
+  text-align: left;
+  margin-left: -10.7vw;
+  font-family: Pixeled;
 }
-#length{
-    width: 25px;
-    height: 25px;
-    border-radius:  3px ;
-
+#length {
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
 }
 
 #output {
@@ -129,28 +123,28 @@ body {
   border-radius: 3px;
 }
 .credits {
+  display: flex;
+  align-items: flex-end;
   color: white;
-  
+
   font-size: small;
   position: relative;
   margin-top: 25px;
   font-family: sans-serif;
 }
 #github {
-
   text-decoration-color: wheat;
   color: white;
   font-size: 14px;
-  position: relative;
   font-family: sans-serif;
 }
-#brazil{
-  position:relative;
-  margin-left: 10px ;
+#brazil {
+  position: relative;
+  margin-left: 10px;
   margin-right: 10px;
   font-family: sans-serif;
 }
-#passwords{
+#passwords {
   margin-left: 0px;
   text-decoration-color: wheat;
   color: white;
@@ -158,29 +152,42 @@ body {
   position: relative;
   font-family: sans-serif;
 }
-#save{
+#save {
   color: white;
   margin-top: -400px;
   font-size: small;
   font-family: Pixeled;
 }
-#save input[type ="checkbox"]{
+#save input[type="checkbox"] {
   appearance: none;
   padding: 10px 10px;
   background-color: white;
   margin-top: 12px;
   position: absolute;
 }
-#save input[type ="checkbox"]:checked{
+#save input[type="checkbox"]:checked {
   appearance: none;
   padding: 10px 10px;
   background-color: #12a52f;
   transition: 0.3s;
   border-radius: 5%;
 }
-#save input[type ="checkbox"]:not(:checked){
+#save input[type="checkbox"]:not(:checked) {
   appearance: none;
   padding: 10px 10px;
   background-color: #ffffff;
   transition: 0.3s;
+}
+
+
+table{
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  width: 100%;
+  border-collapse: collapse;
+}
+#headTable {
+  color: white;
+  width: 100%;
 }
