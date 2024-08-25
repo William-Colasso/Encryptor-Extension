@@ -1,11 +1,11 @@
-document.getElementById('copy').addEventListener('click', copy);
-document.getElementById('button').addEventListener('click', generateKey);
 
-async function copy() {
-  var output = document.getElementById("output").value;
+document.getElementById('copy').addEventListener('click', ()=>copy('output'));
+document.getElementById('button').addEventListener('click', generateKey);
+ function copy(id) {
+  var output = document.getElementById(id).value;
   var copy = document.getElementById("copy");
   try {
-    await navigator.clipboard.writeText(output);
+     navigator.clipboard.writeText(output);
     copy.innerText = "Copied!";
     copy.style.color = "white";
 
@@ -21,6 +21,7 @@ async function copy() {
   } catch (err) {
     console.error("Copying Error" + err);
   }
+  addTable()
 }
 
 async function generateKey() {
@@ -108,11 +109,37 @@ const HashNoNumber = {
       endText+= CharMap[getRandomInteger(1,94)]
     }
     output.innerText = endText
-    
    
   }
-  
+ 
+    
+    
 }
 function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+
+function addTable(){
+  let  counter = localStorage.getItem('counter')
+  var tableBody = document.getElementById('tableBody')
+  var tableRow = document.createElement('tr')
+  tableRow.setAttribute('id','tableRow')
+  var passDate = JSON.parse(localStorage.getItem('0'))
+  
+
+  td = tableRow.insertCell()
+  td.innerText = passDate.password
+  td = tableRow.insertCell()
+  td.innerText = passDate.date
+  td = tableRow.insertCell()
+  button = document.createElement('button')
+  button.setAttribute('id','copy')
+  td.appendChild(button)
+  button.innerText = 'Copy';
+  alert(passDate.password)
+  alert(passDate.date)
+  tableRow.appendChild(td)
+  tableBody.appendChild(tableRow)
+}
+
