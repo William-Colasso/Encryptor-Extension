@@ -193,32 +193,45 @@ footer {
 }
 
 
-table{
-  width: 90%;
-  overflow-y: scroll;
-  
-  
- 
+.tableContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh; /* Centraliza verticalmente */
 }
 
-table,th,td{
-  border: 1px solid #ddd;
+table {
+  width: 90%;
+  
 }
-th,td{
+
+th, td {
+  border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
   color: white;
 }
-th{
+
+th {
   background-color: rgb(0, 0, 0);
-  
 }
-tbody{
-  
-  color: white;
-  border: solid white 1px;
-  min-height: 50%;
-  min-height: 80%;
-  position: absolute;
-  
+
+tbody {
+  max-height: 300px; /* Altura máxima para a tabela antes de surgir o scroll */
+  overflow-y: auto; /* Scroll vertical se o conteúdo exceder a altura máxima */
+  display: block;
+  width: 100%;
+}
+
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
