@@ -1,22 +1,23 @@
-window.onload = function() {
-  let data = JSON.parse(localStorage.getItem('userData'));
-  
+window.onload = function () {
+  const data = JSON.parse(localStorage.getItem("data")) || [];
   if (data) {
-      let tableBody = document.getElementById('tableBody');
-      let newRow = document.createElement('tr');
+    let tableBody = document.getElementById("tableBody");
 
-
-      let dateCell = document.createElement('td');
-      dateCell.innerText = data.date;
-      newRow.appendChild(dateCell);
-      
-      let inputCell = document.createElement('td');
-      inputCell.innerText = data.userInput;
-      newRow.appendChild(inputCell);
-
-      
-      
-
+    data.forEach((entry) => {
+      const newRow = document.createElement("tr");
+      newRow.innerHTML = `<td>${entry.date}</td><td>${entry.input}</td>`;
       tableBody.appendChild(newRow);
+    });
   }
+
+  
 };
+
+function clearTable() {
+  // Limpar tabela na página
+  const tableBody = document.querySelector('#dataTable tbody');
+  tableBody.innerHTML = '';
+
+  // Limpar dados do localStorage
+  localStorage.removeItem('data');
+}

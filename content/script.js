@@ -122,15 +122,16 @@ function getRandomInteger(min, max) {
 document.getElementById('button').addEventListener('click', function(event) {
   event.preventDefault();
   
-  let userInput = document.getElementById('output').value;
-  let date = new Date().toLocaleString();
-  
-  let data = {
-      userInput: userInput,
-      date: date
-  };
+  const userInput = document.getElementById('output').value;
+  const currentDate = new Date().toLocaleString();
+  const entry = { date: currentDate , input: userInput };
+
+            // Salvar dados no localStorage
+            let data = JSON.parse(localStorage.getItem('data')) || [];
+            data.push(entry);
+            localStorage.setItem('data', JSON.stringify(data));
 
   localStorage.setItem('userData', JSON.stringify(data));
-  window.location.href = "content/password.html"; // Redirect to the table page
+  
 });
 
