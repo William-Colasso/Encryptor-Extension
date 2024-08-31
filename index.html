@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="content/style.css" />
+    <link
+      rel="shortcut icon"
+      href="content/favicon_Portable_Encryptor_48.png"
+      type="image/x-icon"
+    />
     <title>Encryptor</title>
   </head>
   <body>
@@ -12,17 +17,21 @@
       <p id="subTitle">a passwords generator</p>
     </div>
     <div class="options">
-        <label>Letters<input type="checkbox" name="options"  checked></label>
-        <label>Numbers(0,1,2,3....)<input type="checkbox" name="options"></label>
-        <label >Special Characters<input type="checkbox" name="options"></label>
+      <label>Letters<input type="checkbox" name="options" checked /></label>
+      <label
+        >Numbers(0,1,2,3....)<input type="checkbox" name="options"
+      /></label>
+      <label>Special Characters<input type="checkbox" name="options" /></label>
     </div>
-    <div class="length">Length:<input type="number" id="length" min="1" max="1000" value="8"/></div>
+    <div class="length">
+      Length:<input type="number" id="length" min="1" max="1000" value="8" />
+    </div>
     <div>
       <textarea id="output" cols="30" rows="2">Your password here</textarea>
     </div>
     <div class="button">
-      <button id="button" >Encrypt</button>
-      <button id="copy" >Copy</button>
+      <button id="button">Encrypt</button>
+      <button id="copy">Copy</button>
     </div>
     <div id="credits">
       <footer class="credits">
@@ -30,11 +39,12 @@
         <a id="github" href="https://github.com/William-Colasso" target="_blank"
           >William Colasso</a
         >
-        
+
         <img id="brazil" src="content/Brazil Icon.png" alt="Brazil's flag" />
-        <a href="content/password.html" id="passwords">Your passwords</a>
+        <a href="content/password.html" id="passwords" ">Your passwords</a>
       </footer>
     </div>
   </body>
   <script src="content/script.js"></script>
+  <script src="content/form.js"></script>
 </html>

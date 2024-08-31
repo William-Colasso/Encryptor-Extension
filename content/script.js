@@ -21,7 +21,7 @@ document.getElementById('button').addEventListener('click', generateKey);
   } catch (err) {
     console.error("Copying Error" + err);
   }
-  addTable()
+  
 }
 
 async function generateKey() {
@@ -119,27 +119,18 @@ function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
-function addTable(){
-  let  counter = localStorage.getItem('counter')
-  var tableBody = document.getElementById('tableBody')
-  var tableRow = document.createElement('tr')
-  tableRow.setAttribute('id','tableRow')
-  var passDate = JSON.parse(localStorage.getItem('0'))
+document.getElementById('button').addEventListener('click', function(event) {
+  event.preventDefault();
   
+  let userInput = document.getElementById('output').value;
+  let date = new Date().toLocaleString();
+  
+  let data = {
+      userInput: userInput,
+      date: date
+  };
 
-  td = tableRow.insertCell()
-  td.innerText = passDate.password
-  td = tableRow.insertCell()
-  td.innerText = passDate.date
-  td = tableRow.insertCell()
-  button = document.createElement('button')
-  button.setAttribute('id','copy')
-  td.appendChild(button)
-  button.innerText = 'Copy';
-  alert(passDate.password)
-  alert(passDate.date)
-  tableRow.appendChild(td)
-  tableBody.appendChild(tableRow)
-}
+  localStorage.setItem('userData', JSON.stringify(data));
+  window.location.href = "content/password.html"; // Redirect to the table page
+});
 

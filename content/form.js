@@ -1,49 +1,22 @@
-var submit = document.getElementById("button");
-document.addEventListener("DOMContentLoaded", () => {
-    // Initialize counter if not set
-    if (localStorage.getItem('counter') === null) {
-      localStorage.setItem('counter', 0);
-    }
-})
-submit.addEventListener("click", (e) => {
-  var input = document.getElementById("output");
-  var dates = new Date();
-  let password;
-  let date;
-  if (
-    input.value != undefined &&
-    input.value != null &&
-    input.value != NaN &&
-    input.value != false &&
-    input.value != ""
-  ) {
-    password = String (input.value);
-    date =
-      String(Number(dates.getMonth()) + 1) +
-      "/" +
-      String(dates.getDate()) +
-      "/" +
-      String(dates.getFullYear()) +
-      "," +
-      String(dates.getHours()) +
-      ":" +
-      String(dates.getMinutes()) +
-      ":" +
-      String(dates.getSeconds());
-  } else {
-    console.log("Invalid parameters");
-    return;
+window.onload = function() {
+  let data = JSON.parse(localStorage.getItem('userData'));
+  
+  if (data) {
+      let tableBody = document.getElementById('tableBody');
+      let newRow = document.createElement('tr');
+
+
+      let dateCell = document.createElement('td');
+      dateCell.innerText = data.date;
+      newRow.appendChild(dateCell);
+      
+      let inputCell = document.createElement('td');
+      inputCell.innerText = data.userInput;
+      newRow.appendChild(inputCell);
+
+      
+      
+
+      tableBody.appendChild(newRow);
   }
-
-  var obj = {
-    password,
-    date
-  };
-
-  obj.password = password
-  obj.date = date
-  counter = localStorage.getItem("counter");
-  localStorage.setItem(String(counter), JSON.stringify(obj));
-  localStorage.setItem("counter", Number(counter) + 1);
-  e.preventDefault();
-});
+};
