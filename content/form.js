@@ -5,7 +5,7 @@ window.onload = function () {
 
     data.forEach((entry) => {
       const newRow = document.createElement("tr");
-      newRow.innerHTML = `<td>${entry.date}</td><td>${entry.input}</td>`;
+      newRow.innerHTML = `<td>${entry.date}</td><td>${entry.input}</td><button id="copy">Copy</button>`;
       tableBody.appendChild(newRow);
     });
   }
