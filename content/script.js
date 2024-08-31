@@ -124,7 +124,9 @@ document.getElementById('button').addEventListener('click', function(event) {
   
   const userInput = document.getElementById('output').value;
   const currentDate = new Date().toLocaleString();
-  const entry = { date: currentDate , input: userInput };
+  const buttonCopy = document.createElement('button')
+
+  const entry = { date: currentDate , input: userInput, button:buttonCopy };
 
             // Salvar dados no localStorage
             let data = JSON.parse(localStorage.getItem('data')) || [];
