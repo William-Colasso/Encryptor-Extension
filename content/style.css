@@ -11,6 +11,7 @@ html {
 }
 
 body {
+
   background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
@@ -22,6 +23,7 @@ body {
   border: solid 1px black;
   border-radius: 20%;
 }
+
 .title {
   margin-bottom: 5vh;
   font-family: Pixeled;
@@ -111,7 +113,7 @@ body {
   color: black;
   border-radius: 3px;
 }
-#copy {
+.copiators {
   text-decoration: none;
   padding: 10px;
   background-color: black;
@@ -120,7 +122,7 @@ body {
   border: 2px #218b2f solid;
   cursor: pointer;
 }
-#copy:hover {
+.copiators:hover {
   transition: 0.5s;
   background-color: white;
   color: black;
@@ -193,16 +195,10 @@ footer {
 }
 
 
-.tableContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh; /* Centraliza verticalmente */
-}
+
 
 table {
-  width: 90%;
+  width: 100%;
   
 }
 
@@ -234,4 +230,28 @@ thead, tbody tr {
   display: table;
   width: 100%;
   table-layout: fixed;
+}
+.tableContainer ::-webkit-scrollbar {
+  background-color: rgb(0, 0, 0);
+  /*Desativar parte visual da  barra de rolagem*/
+}
+.tableContainer ::-webkit-scrollbar-thumb {
+  background-color: rgb(19, 18, 18);
+  border-radius: 10px;
+
+  /*Desativar parte visual da  barra de rolagem*/
+}
+
+.copiators label input[type="checkbox"]::after {
+  /* Conteúdo do símbolo (um "✔️") */
+  content: "\2714"; /* Código Unicode do símbolo de certo */
+  /* Posiciona o símbolo no centro da caixa de seleção */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Define a cor do símbolo */
+  color: #ffffff;
+  /* Define o tamanho do símbolo */
+  font-size: 16px;
 }
