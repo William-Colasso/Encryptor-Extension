@@ -5,7 +5,7 @@ window.onload = function () {
 
     data.forEach((entry) => {
       const newRow = document.createElement("tr");
-      
+
       // Create date and input cells
       const dateCell = document.createElement("td");
       dateCell.textContent = entry.date;
@@ -15,9 +15,9 @@ window.onload = function () {
       // Create the copy button
       const buttonCell = document.createElement("td");
       const buttonCopy = document.createElement("button");
-      buttonCopy.setAttribute('class','copiators')
+      buttonCopy.setAttribute("class", "copiators");
       buttonCopy.textContent = "Copy";
-      
+
       buttonCopy.addEventListener("click", () => {
         try {
           navigator.clipboard.writeText(entry.input); // Copy the input value
@@ -43,14 +43,27 @@ window.onload = function () {
       // Append the row to the table body
       tableBody.appendChild(newRow);
     });
+
+    const checked = Boolean(JSON.parse(localStorage.getItem("value")));
+
+    if (checked) {
+      const valueBox = (document.getElementById("savePassword").checked = true);
+    }
   }
 };
-
 function clearTable() {
   // Limpar tabela na página
-  const tableBody = document.querySelector('#dataTable tbody');
-  tableBody.innerHTML = '';
+  const tableBody = document.querySelector("#dataTable tbody");
+  tableBody.innerHTML = "";
 
   // Limpar dados do localStorage
-  localStorage.removeItem('data');
+  localStorage.removeItem("data");
 }
+
+const it = document.getElementById("passwords");
+it.addEventListener("click", () => {
+  
+  const valueBox = document.getElementById("savePassword");
+
+  localStorage.setItem("value", valueBox.checked);
+});

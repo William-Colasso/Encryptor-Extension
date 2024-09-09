@@ -1,7 +1,7 @@
-document
-  .getElementById("copy")
-  .addEventListener("click", () => copy("output", "copy"));
-document.getElementById("button").addEventListener("click", generateKey);
+document.getElementById("copy").addEventListener("click", () => copy("output", "copy"));
+
+document.getElementById("button").addEventListener("click", generateKey);    
+
 function copy(id, button) {
   var output = document.getElementById(id).value;
   var copy = document.getElementById(button);
@@ -266,8 +266,7 @@ function getRandomInteger(min, max) {
 }
 
 document.getElementById("button").addEventListener("click", function (event) {
-  document.getElementById('save')
- if(SVGAElement.checked){ event.preventDefault();
+  event.preventDefault();
 
   const userInput = document.getElementById("output").value;
   const currentDate = new Date().toLocaleString();
@@ -283,5 +282,5 @@ document.getElementById("button").addEventListener("click", function (event) {
   localStorage.setItem("data", JSON.stringify(data));
 
   // Adiciona a nova entrada à tabela
-  window.onload();}
+  window.onload();
 });
