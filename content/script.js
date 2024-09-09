@@ -1,6 +1,8 @@
-document.getElementById("copy").addEventListener("click", () => copy("output", "copy"));
+document
+  .getElementById("copy")
+  .addEventListener("click", () => copy("output", "copy"));
 
-document.getElementById("button").addEventListener("click", generateKey);    
+document.getElementById("button").addEventListener("click", generateKey);
 
 function copy(id, button) {
   var output = document.getElementById(id).value;
@@ -268,19 +270,24 @@ function getRandomInteger(min, max) {
 document.getElementById("button").addEventListener("click", function (event) {
   event.preventDefault();
 
-  const userInput = document.getElementById("output").value;
-  const currentDate = new Date().toLocaleString();
+  const checked = Boolean(JSON.parse(localStorage.getItem("value")));
 
-  const entry = {
-    date: currentDate,
-    input: userInput,
-  };
+  if (checked) {
+    const userInput = document.getElementById("output").value;
+    const currentDate = new Date().toLocaleString();
 
-  // Salvar dados no localStorage
-  let data = JSON.parse(localStorage.getItem("data")) || [];
-  data.push(entry);
-  localStorage.setItem("data", JSON.stringify(data));
+    const entry = {
+      date: currentDate,
+      input: userInput,
+    };
+
+    // Salvar dados no localStorage
+    let data = JSON.parse(localStorage.getItem("data")) || [];
+    data.push(entry);
+    localStorage.setItem("data", JSON.stringify(data));
+  }
 
   // Adiciona a nova entrada à tabela
+
   window.onload();
 });
